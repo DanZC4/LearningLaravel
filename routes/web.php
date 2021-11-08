@@ -14,6 +14,20 @@ use App\Models\User;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', function(){
+    return view('welcome');
+});
+
+Route::get('/home', function(){
+    return 'hello';
+});
+
+Route::put('post/{id}', function($id){
+
+})->middleware('role:editor');
+
+/** 
 // abrebiacion para la vista de una ruta tambien le pasamos valores al parametro name :)
 Route::view('/welcome', 'welcome', ['name' => 'Daniel']);
 
@@ -131,4 +145,4 @@ Route::fallback(function () {
     return 'dont care me';
 });
 
-
+*/
